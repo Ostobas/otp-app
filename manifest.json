@@ -1,0 +1,20 @@
+{
+    "name": "OTP BankIt Competition",
+    "short_name": "OTP BankIt",
+    "icons": [
+      {
+        "src": "src/img/site/manifest-icon-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "src/img/site/manifest-icon-192.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#fff",
+    "display": "standalone",
+    "theme_color": "#50af31"
+  }

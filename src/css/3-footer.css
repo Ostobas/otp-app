@@ -1,0 +1,45 @@
+/*--------------------
+        Footer
+---------------------*/
+footer.footer, #footer.footer {
+    background-color: #505050;
+    color: #fff;
+    margin-top: 4.5rem;
+    padding: 1.5rem 0;
+    font-size: 80%;
+    text-align: center;
+}
+footer.footer h3, #footer.footer h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+footer.footer .nav .link {
+    padding: .75rem;
+    padding-left: 0;
+    font-weight: 400;
+}
+footer.footer ul > li, #footer.footer ul > li {
+    margin-bottom: .2rem;
+}
+footer.footer ul > li i, #footer.footer ul > li i {
+    margin-right: .5rem;
+}
+footer.footer a:hover, #footer.footer a:hover {
+    color: #fff;
+}
+@media screen and (min-width: 768px) {
+    footer.footer, #footer.footer, footer.footer ul, #footer.footer ul {
+        text-align: left;
+    }
+}
+/*--------------------
+        Bottom
+---------------------*/
+footer.footer .bottom, #footer.footer .bottom {
+    font-size: 85%;
+    color: rgba(256, 256, 256, .75);
+}
+footer.footer .bottom .divider, #footer.footer .bottom .divider {
+    margin-right: .5rem;
+    margin-left: .5rem;
+}
