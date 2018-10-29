@@ -48,11 +48,71 @@ var room = new Vue({
         heroes: [{
             index: 1,
             image: 1,
-            position: 200
+            position: 310
         }, {
             index: 2,
             image: 2,
-            position: 400
+            position: 420
+        }, {
+            index: 3,
+            image: 3,
+            position: 635
+        }, {
+            index: 4,
+            image: 4,
+            position: 1650
+        }, {
+            index: 5,
+            image: 5,
+            position: 1800
+        }, {
+            index: 6,
+            image: 6,
+            position: 1950
+        }, {
+            index: 7,
+            image: 7,
+            position: 2850
+        }, {
+            index: 8,
+            image: 8,
+            position: 2950
+        }, {
+            index: 9,
+            image: 9,
+            position: 3110
+        }, {
+            index: 10,
+            image: 10,
+            position: 3700
+        }, {
+            index: 11,
+            image: 11,
+            position: 4150
+        }, {
+            index: 12,
+            image: 12,
+            position: 4900
+        }, {
+            index: 13,
+            image: 13,
+            position: 6050
+        }, {
+            index: 14,
+            image: 14,
+            position: 6600
+        }, {
+            index: 15,
+            image: 15,
+            position: 7350
+        }, {
+            index: 16,
+            image: 16,
+            position: 7500
+        }, {
+            index: 17,
+            image: 17,
+            position: 7900
         }]
     },
     methods: {
@@ -81,8 +141,11 @@ var room = new Vue({
         }
     },
     computed: {
-        bgStyle() {
+        bgTranslate() {
             return { transform: 'translateX(' + this.translate + 'px)' }
+        },
+        heroesTranslate() {
+            return { transform: 'translate(' + this.translate + 'px, 260px)' }
         }
     }
 })
