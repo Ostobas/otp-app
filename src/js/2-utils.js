@@ -1,5 +1,8 @@
 // Init the ui library
-var ui = ui()
+var ui
+document.addEventListener('DOMContentLoaded', function() {
+    ui = ui()
+}, false)
 
 function postData(uri, data, callback) {
     var xhttp = new XMLHttpRequest()
