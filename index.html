@@ -22,15 +22,18 @@
     <link rel="stylesheet" type="text/css" href="./src/css/0-reset.css">
     <link rel="stylesheet" type="text/css" href="./src/css/1-grid.css" />
     <link rel="stylesheet" type="text/css" href="./src/css/2-nav.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/3-alert.css" />
     <link rel="stylesheet" type="text/css" href="./src/css/3-button.css" />
     <link rel="stylesheet" type="text/css" href="./src/css/3-cookie-banner.css" />
     <link rel="stylesheet" type="text/css" href="./src/css/3-footer.css" />
     <link rel="stylesheet" type="text/css" href="./src/css/3-form.css" />
     <link rel="stylesheet" type="text/css" href="./src/css/3-jumbotron.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/3-loader.css" />
     <link rel="stylesheet" type="text/css" href="./src/css/3-modal.css" />
     <link rel="stylesheet" type="text/css" href="./src/css/4-main.css" />
     <link rel="stylesheet" type="text/css" href="./src/css/5-scpecial.css" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <!-- Facebook Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '239983389739213');fbq('track', 'PageView');
@@ -39,6 +42,7 @@
         <img height="1" width="1" src="https://www.facebook.com/tr?id=239983389739213&ev=PageView&noscript=1"/>
     </noscript>
     <!-- End Facebook Pixel Code -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body>
@@ -47,7 +51,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1683362-56"></script>
 <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-1683362-56'); </script>
 
-    <nav id="topNav" class="nav top fixed">
+    <nav id="topNav" class="nav top">
         <div class="container">
             <div class="line">
                 <div class="left">
@@ -70,6 +74,10 @@
             </div>
         </div>
     </nav>
+    <main>
+        <button id="arrowLeft" class="arrow" onclick="moveRoom(-1)"><i class="fas fa-chevron-circle-left"></i></button>
+        <button id="arrowRight" class="arrow" onclick="moveRoom(1)"><i class="fas fa-chevron-circle-right"></i></button>
+    </main>
     <section id="modals">
         <div id="solutionsModal" class="modal">
             <div class="dimmer">
@@ -79,15 +87,32 @@
                         <div class="close-icon">&times</div>
                     </div>
                     <div class="body" id="solutions">
-                        <form class="form" id="solution-1" method="post">
-                            <div class="field">
-                                <label>1. feladat</label>
-                                <div class="line">
-                                    <input type="text" name="solution" placeholder="" maxlength="30">
-                                    <button class="btn primary ml-2" type="submit">Mentés</button>
+                        <div v-if="fetching" class='spinner-loader'>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div v-if="!fetching" id="solutionForms">
+                            <form v-for="solution in solutions" v-on:submit.prevent="onSubmit(solution.index, solution.value)" class="form">
+                                <div class="field">
+                                    <label>{{ solution.index }}. feladat</label>
+                                    <div class="line">
+                                        <input
+                                            type="text"
+                                            name="solution"
+                                            v-model="solution.value"
+                                            v-bind:disabled="disabled"
+                                        >
+                                        <button class="btn primary ml-2" type="submit">Mentés</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

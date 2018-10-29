@@ -1,96 +1,33 @@
-.page-header {
-    background: url(../img/bg.jpg) no-repeat center center;
-    background-color: #4e84c4;
-    background-size: cover;
-    color: #fff;
-}
-#faceImgGrid .image {
+main {
+    height: calc(100vh - 7rem);
+    overflow: hidden;
     position: relative;
-    max-width: 25%;
+    width: 100%;
 }
-#faceImgGrid .image:nth-child(odd) {
-    top: 10px;
-}
-#faceImgGrid .image:nth-child(even) {
-    top: -10px;
-}
-#about {
-    background: url(../img/bg_about.jpg) no-repeat center center;
-    background-color: #4e84c4;
+main::before {
+    background: url("../img/bg.jpg") repeat-x left bottom;
+    background-color: #fff3d9;
     background-size: cover;
-    color: #fff;
-    padding: 1.5rem 0;
+    content: "";
+    height: 100%;
+    position: absolute;
+    transform: translateX(0);
+    width: 100%;
+    z-index: -1;
 }
-@media (max-width: 576px) {
-    #about {
-        background-position: left center;
-    }
-    #awards {
-        text-align: center;
-    }
-}
-#partnerImgGrid {
-    justify-content: center;
-    flex-wrap: wrap;
-}
-#partnerImgGrid img {
-    margin: 1rem;
-}
-.logo-dark {
-    display: inline-block;
-    background-position: center center;
-    background-size: cover;
-    background-image: url(../img/logo_dark.png);
-    width: 142px;
-    height: 35px;
-    flex-shrink: 0;
-    margin: 1.5625rem 0;
-}
-.divider-right {
-    border-right: 1px solid rgba(256, 256, 256, .5);
-}
-#content h1 {
-    margin: 3rem 0 2rem;
-}
-#content h2 {
-    margin: 2rem 0 1rem;
-}
-#content p {
-    margin-bottom: 1rem;
-}
-#content a {
+
+.arrow {
     color: #50af31;
-    font-weight: 700;
+    font-size: 3rem;
+    position: absolute;
+    top: 40%;
+    margin: 0 1rem;
 }
-#content img, #content iframe {
-    max-width: 100%!important;
+
+#arrowLeft {
+    left: 0;
 }
-.participant {
-    display: flex;
-    background-color: #50af31;
-    color: #fff;
-    margin: 1rem 0;
-    border-radius: 4px;
-}
-.participant .numb {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    font-size: 1.5em;
-    font-weight: 700;
-    border-radius: .225rem;
-}
-.participant .team {
-    display: flex;
-    flex-flow: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-.participant .name {
-    font-size: 1.1em;
-    font-weight: 700;
-}
-.participant .small {
-    font-size: .8em;
+
+#arrowRight {
+    right: 0;
 }

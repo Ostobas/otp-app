@@ -1,0 +1,67 @@
+/*--------------------
+        Alert deck
+---------------------*/
+.alert-deck {
+    position: fixed;
+    width: 100%;
+    max-width: 350px;
+    z-index: 390;
+    top: 0;
+    right: 0;
+}
+/*--------------------
+        Alert
+---------------------*/
+.alert {
+    margin: 15px;
+    padding: .9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+    border-radius: .23rem;
+    color: #fff;
+    opacity: 1;
+    overflow: hidden;
+    min-height: 70px;
+    background-color: #17a2b8;
+    cursor: pointer;
+    animation: createAlert .25s ease-in-out;
+}
+.alert.remove {
+    opacity: 0;
+    animation: removeAlert .25s ease-in-out;
+}
+.alert.success {
+    background-color: #50af31;
+}
+.alert.danger {
+    background-color: #dc3545;
+}
+.alert .content + .close-btn {
+    margin-left: 1.5rem;
+    font-weight: 700;
+}
+/*--------------------
+        Animations
+---------------------*/
+@keyframes createAlert {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes removeAlert {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}

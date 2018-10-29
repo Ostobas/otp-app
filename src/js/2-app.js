@@ -1,27 +1,50 @@
 // Init the ui library
 var ui = ui()
 
-var solutionIndex = 1
-ui.form('#solution-' + solutionIndex,
-    [{
-        name: 'solution',
-        rules: [{
-            type: 'required',
-            message: 'A feladatra nem lehet üres megoldást küldeni!'
+// Return value
+var solutions =  new Vue({
+    el: '#solutions',
+    data: {
+        fetching: false,
+        disabled: false,
+        solutions: [{
+            index: 1,
+            value: ''
+        }, {
+            index: 2,
+            value: ''
+        }, {
+            index: 3,
+            value: ''
         }]
-    }], function(res) {
-        if (res.valid) {
-            var data = {
-                index: solutionIndex,
-                data: res.fields[0].value
+    },
+    methods: {
+        onSubmit: function(index, value) {
+            if (value === '') {
+                saveSolutionFailed({index, msg: 'Üresen nem lehet menteni!'})
+            } else {
+                saveSolutionSuccess({index, value})
             }
-            sendData('/api/saveSolution.php', data, saveSolutionSuccess)
         }
     }
-)
+})
 
 function saveSolutionSuccess(res) {
-    console.log('Success', res)
+    ui.alert({
+        type: 'success',
+        content: `Megoldás sikeresen elmentve: <br> ${res.index}. feladat: ${res.value}`
+    })
+}
+
+function saveSolutionFailed(res) {
+    ui.alert({
+        type: 'danger',
+        content: `Megoldás mentése sikertelen (${res.index}. feladat): <br> ${res.msg}`
+    })
+}
+
+function moveRoom(dir) {
+    console.log(dir)
 }
 
 function sendData(uri, data, callback) {
@@ -35,48 +58,3 @@ function sendData(uri, data, callback) {
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
     xhttp.send('data=' +  JSON.stringify(data))
 }
-
-// Lazy loading
-document.addEventListener('DOMContentLoaded', function () {
-    // Create an arra of imgaes with lazy classes
-    var lazyImages = [].slice.call(document.querySelectorAll('img.lazy'))
-    var active = false
-
-    // Create the function
-    var lazyLoad = function () {
-        if (active === false) {
-            active = true
-
-            setTimeout(function () {
-                lazyImages.forEach(function (lazyImage) {
-                    // The imgage is entering the screen
-                    if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== 'none') {
-                        // Set the src attribute from the data-src
-                        lazyImage.src = lazyImage.dataset.src
-                        // Remove the class
-                        lazyImage.classList.remove('lazy')
-
-                        // Remove the image from the array
-                        lazyImages = lazyImages.filter(function (image) {
-                            return image !== lazyImage
-                        })
-
-                        // Check if the array is empty, then remove the event listeners
-                        if (lazyImages.length === 0) {
-                            document.removeEventListener('scroll', lazyLoad)
-                            window.removeEventListener('resize', lazyLoad)
-                            window.removeEventListener('orientationchange', lazyLoad)
-                        }
-                    }
-                })
-
-                active = false
-            }, 200)
-        }
-    }
-
-    // Add the event listeners
-    document.addEventListener('scroll', lazyLoad)
-    window.addEventListener('resize', lazyLoad)
-    window.addEventListener('orientationchange', lazyLoad)
-})
