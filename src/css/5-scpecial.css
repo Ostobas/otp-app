@@ -26,8 +26,8 @@ main .grid-background {
     font-size: 3rem;
     margin: 0 1rem;
     position: absolute;
-    top: 40%;
-    z-index: 900;
+    top: 20%;
+    z-index: 180;
 }
 
 #arrowLeft {

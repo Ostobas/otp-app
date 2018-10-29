@@ -137,7 +137,8 @@ var room = new Vue({
             this.translate = nextTranslate
         },
         openTask(index) {
-            console.log('Open task: ', index)
+            ui.openModal('#taskModal')
+            tasks.index = index
         }
     },
     computed: {
@@ -150,3 +151,9 @@ var room = new Vue({
     }
 })
 
+var tasks = new Vue({
+    el: '#taskModal',
+    data: {
+        index: 0
+    }
+})
