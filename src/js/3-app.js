@@ -40,13 +40,44 @@ var solutions =  new Vue({
 var room = new Vue({
     el: 'main',
     data: {
-        translate: 0
+        arrows: {
+            left: true,
+            right: false
+        },
+        translate: 0,
+        heroes: [{
+            index: 1,
+            image: 1,
+            position: 200
+        }, {
+            index: 2,
+            image: 2,
+            position: 400
+        }]
     },
     methods: {
-        moveRoom: function(dir) {
-            console.log('Move room, directon: ', dir)
-            this.translate += dir * 1440
-            console.log('Tranlate value: ', this.translate)
+        moveRoom(dir) {
+            var windowWidth = window.innerWidth
+            var translateAmount = Math.min( 1170, windowWidth )
+            var maxTranslate = -8193 + windowWidth
+            var nextTranslate = Math.max( Math.min( this.translate + dir * translateAmount, 0), maxTranslate)
+
+            if (nextTranslate >= 0) {
+                this.arrows.left = true
+            } else {
+                this.arrows.left = false
+            }
+
+            if (nextTranslate <= maxTranslate) {
+                this.arrows.right = true
+            } else {
+                this.arrows.right = false
+            }
+
+            this.translate = nextTranslate
+        },
+        openTask(index) {
+            console.log('Open task: ', index)
         }
     },
     computed: {

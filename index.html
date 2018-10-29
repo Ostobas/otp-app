@@ -75,10 +75,15 @@
         </div>
     </nav>
     <main>
-        <button id="arrowLeft" class="arrow" v-on:click="moveRoom(1)"><i class="fas fa-chevron-circle-left"></i></button>
-        <button id="arrowRight" class="arrow" v-on:click="moveRoom(-1)"><i class="fas fa-chevron-circle-right"></i></button>
+        <button id="arrowLeft" class="arrow" v-on:click="moveRoom(1)" :disabled="arrows.left"><i class="fas fa-chevron-circle-left"></i></button>
+        <button id="arrowRight" class="arrow" v-on:click="moveRoom(-1)" :disabled="arrows.right"><i class="fas fa-chevron-circle-right"></i></button>
         <div class="grid">
             <div class="grid-background" :style="bgStyle"></div>
+            <div class="heroes">
+                <div v-for="hero in heroes" class="hero-grid" :style="{ left: hero.position + 'px' }" v-on:click="openTask(hero.index)">
+                    <img class="hero-img" :src="'./src/img/heroes/hero-' + hero.image + '.png'" alt="hero">
+                </div>
+            </div>
         </div>
     </main>
     <section id="modals">

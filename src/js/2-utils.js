@@ -1,10 +1,6 @@
 // Init the ui library
 var ui = ui()
 
-function openTask(index) {
-    console.log('Open task with index ', index)
-}
-
 function postData(uri, data, callback) {
     var xhttp = new XMLHttpRequest()
     xhttp.onreadystatechange = function () {

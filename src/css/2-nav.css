@@ -2,6 +2,7 @@
         Nav
 ---------------------*/
 nav.nav {
+    background-color: #fff;
     position: relative;
     display: flex;
     -ms-flex-wrap: wrap;
