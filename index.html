@@ -75,8 +75,11 @@
         </div>
     </nav>
     <main>
-        <button id="arrowLeft" class="arrow" onclick="moveRoom(-1)"><i class="fas fa-chevron-circle-left"></i></button>
-        <button id="arrowRight" class="arrow" onclick="moveRoom(1)"><i class="fas fa-chevron-circle-right"></i></button>
+        <button id="arrowLeft" class="arrow" v-on:click="moveRoom(1)"><i class="fas fa-chevron-circle-left"></i></button>
+        <button id="arrowRight" class="arrow" v-on:click="moveRoom(-1)"><i class="fas fa-chevron-circle-right"></i></button>
+        <div class="grid">
+            <div class="grid-background" :style="bgStyle"></div>
+        </div>
     </main>
     <section id="modals">
         <div id="solutionsModal" class="modal">
@@ -120,7 +123,8 @@
     </section>
 
     <script src="./src/js/1-ui.js" type="text/javascript"></script>
-    <script src="./src/js/2-app.js" type="text/javascript"></script>
+    <script src="./src/js/2-utils.js" type="text/javascript"></script>
+    <script src="./src/js/3-app.js" type="text/javascript"></script>
 
 </body>
 

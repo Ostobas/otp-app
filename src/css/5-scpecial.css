@@ -1,17 +1,22 @@
 main {
     height: calc(100vh - 7rem);
     overflow: hidden;
-    position: relative;
     width: 100%;
 }
-main::before {
+main .grid {
+    width: 3000px;
+    height: 100%;
+    position: relative;
+}
+main .grid-background {
     background: url("../img/bg.jpg") repeat-x left bottom;
     background-color: #fff3d9;
-    background-size: cover;
+    background-size: contain;
     content: "";
     height: 100%;
     position: absolute;
     transform: translateX(0);
+    transition: transform .5s ease-in-out;
     width: 100%;
     z-index: -1;
 }
@@ -19,9 +24,10 @@ main::before {
 .arrow {
     color: #50af31;
     font-size: 3rem;
+    margin: 0 1rem;
     position: absolute;
     top: 40%;
-    margin: 0 1rem;
+    z-index: 900;
 }
 
 #arrowLeft {
