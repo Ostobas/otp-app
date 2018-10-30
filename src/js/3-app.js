@@ -1,9 +1,9 @@
 new Vue({
-    el: '#solutions',
+    el: '#answers',
     data: {
         fetching: false,
         disabled: false,
-        solutions: store.solutions
+        answers: store.answers
     },
     methods: {
         onSubmit: function(index, value) {
@@ -14,6 +14,7 @@ new Vue({
             }
         },
         success: function (res) {
+            console.log(res)
             ui.alert({
                 type: 'success',
                 content: `Megoldás sikeresen elmentve: <br> ${res.index}. feladat: ${res.value}`
@@ -41,8 +42,8 @@ new Vue({
     methods: {
         moveRoom(dir) {
             var windowWidth = window.innerWidth
-            var translateAmount = Math.min( 1170, windowWidth )
-            var maxTranslate = -8193 + windowWidth
+            var translateAmount = Math.min( 1170, windowWidth ) // 1170: size of a room
+            var maxTranslate = -8193 + windowWidth // 8193: size of the whole office
             var nextTranslate = Math.max( Math.min( this.translate + dir * translateAmount, 0), maxTranslate)
 
             if (nextTranslate >= 0) {
@@ -87,16 +88,16 @@ var tasks = new Vue({
     data: {
         index: 0,
         tasks: store.tasks,
-        solutions: store.solutions
+        aswers: store.answers
     },
     methods: {
         task(index) {
             return this.tasks.filter((t) => t.index === index)[0]
         },
-        solution(index) {
+        answer(index) {
             if (!index) return false
             else {
-                return this.solutions.filter((s) => s.index === index)[0].value
+                return this.aswers.filter((a) => a.index === index)[0].value
             }
         }
     }

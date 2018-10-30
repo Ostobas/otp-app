@@ -129,7 +129,7 @@
         Disabled
 ---------------------*/
 button:disabled, button:hover:disabled, button:active:disabled {
-    background-color: rgba(0, 0, 0, 0);
-    color: rgba(0, 0, 0, .2);
-    cursor: auto;
+    background-color: rgba(0, 0, 0, 0) !important;
+    color: rgba(0, 0, 0, .2) !important;
+    cursor: auto !important;
 }

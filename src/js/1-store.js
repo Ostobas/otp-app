@@ -1,5 +1,5 @@
 var store = {
-    solutions: [
+    answers: [
         {
             index: 1,
             value: ''
@@ -28,22 +28,22 @@ var store = {
     ],
     heroes: [
         {
-            index: 1,
             image: 1,
+            index: 1,
             position: 310
         }, {
             image: 2,
             position: 420
         }, {
-            index: 2,
             image: 3,
+            index: 2,
             position: 635
         }, {
             image: 4,
             position: 1650
         }, {
-            index: 3,
             image: 5,
+            index: 3,
             position: 1800
         }, {
             image: 6,
@@ -55,12 +55,12 @@ var store = {
             image: 8,
             position: 2950
         }, {
-            index: 4,
             image: 9,
+            index: 4,
             position: 3110
         }, {
-            index: 5,
             image: 10,
+            index: 5,
             position: 3700
         }, {
             image: 11,
@@ -69,22 +69,22 @@ var store = {
             image: 12,
             position: 4900
         }, {
-            index: 6,
             image: 13,
+            index: 6,
             position: 6050
         }, {
             image: 14,
             position: 6600
         }, {
-            index: 7,
             image: 15,
+            index: 7,
             position: 7350
         }, {
             image: 16,
             position: 7500
         }, {
-            index: 8,
             image: 17,
+            index: 8,
             position: 7900
         }
     ],
@@ -103,7 +103,9 @@ var store = {
     }, {
         index: 2,
         title: 'Kötél',
-        desc: 'Adott két kötél, amikről tudjuk, hogy ha meggyújtjuk a végét, akkor éppen 1 óra alatt ég végig, valamint nem hajtogathatók. Nincs nálunk óra, a feladat az, hogy mérjünk ki negyed órát. A kötelek nem egyenletesen égnek el, azaz az elégett hossz, és az eltelt idő nincs semmilyen arányban. Hány percre van szükségünk összesen a negyed óra kiméréséhez?'
+        desc: '<p>Adott két kötél, amikről tudjuk, hogy ha meggyújtjuk a végét, akkor éppen 1 óra alatt ég végig, valamint nem hajtogathatók.</p> \
+        <p>Nincs nálunk óra, a feladat az, hogy mérjünk ki negyed órát. A kötelek nem egyenletesen égnek el, azaz az elégett hossz, és az eltelt idő nincs semmilyen arányban.</p> \
+        <p>Hány percre van szükségünk összesen a negyed óra kiméréséhez?</p>'
     }, {
         index: 3,
         title: 'Einstein feladványa',
@@ -128,7 +130,8 @@ var store = {
     }, {
         index: 4,
         title: 'Patkány',
-        desc: 'Adott 1000 palack bor, az egyik mérgezett, ha megiszunk belőle bármekkora mennyiséget a méreg 1 óra alatt megöl. Hány patkányra van szükségünk, hogy 100% - os biztonsággal meg tudjuk állapítani 1 óra alatt az előkészületi időt nem számítva, hogy melyik palackban van a méreg?'
+        desc: '<p>Adott 1000 palack bor, az egyik mérgezett, ha megiszunk belőle bármekkora mennyiséget a méreg 1 óra alatt megöl.</p> \
+        <p>Hány patkányra van szükségünk, hogy 100% - os biztonsággal meg tudjuk állapítani 1 óra alatt az előkészületi időt nem számítva, hogy melyik palackban van a méreg?</p>'
     }, {
         index: 5,
         title: 'Sakktábla',
