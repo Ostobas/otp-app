@@ -220,5 +220,10 @@ var store = {
         <p>Csak egy fáklya van, amit nem lehet kettétörni. Mivel különböző az állóképességük, és néhányan kisebb sérüléssel küzdenek, különböző sebességgel tudnak átkelni a hídon.</p> \
         <p>Adam 1p, Bob 2p, Clair 5p, és Dave 10 p alatt.</p> \
         <p>Hány perc alatt teljesíthető a leggyorsabban az átkelés a hídon?</p>'
-    }]
+    }],
+    user: {
+        deadline: '',
+        firstName: '',
+        teamName: ''
+    }
 }

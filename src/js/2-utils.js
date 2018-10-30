@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function init() {
     getData('/inc/process/p.userInit.php', function(res) {
         console.log(res)
+        store.user = res.data.user
     })
 }
 
