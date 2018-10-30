@@ -8,21 +8,28 @@ new Vue({
     methods: {
         onSubmit: function(index, value) {
             if (value === '') {
-                this.failed({index, msg: 'Üresen nem lehet menteni!'})
+                this.failed({ msg: 'Üresen nem lehet menteni!' })
             } else {
-                this.success({index, value})
+                postData('/inc/process/p.saveAnswer.php', {index, value}, this.responseHandler)
+            }
+        },
+        responseHandler(res) {
+            if (res.isValid) {
+                this.success(res)
+            } else {
+                this.failed(res)
             }
         },
         success: function (res) {
             ui.alert({
                 type: 'success',
-                content: `Megoldás sikeresen elmentve: <br> ${res.index}. feladat: ${res.value}`
+                content: `Megoldás sikeresen elmentve: <br> ${res.data.index}. feladat: ${res.data.value}`
             })
         },
         failed: function (res) {
             ui.alert({
                 type: 'danger',
-                content: `Megoldás mentése sikertelen (${res.index}. feladat): <br> ${res.msg}`
+                content: `Megoldás mentése sikertelen: <br> ${res.msg}`
             })
         }
     }
