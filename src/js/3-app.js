@@ -12,6 +12,21 @@ var solutions =  new Vue({
         }, {
             index: 3,
             value: ''
+        }, {
+            index: 4,
+            value: ''
+        }, {
+            index: 5,
+            value: ''
+        }, {
+            index: 6,
+            value: ''
+        }, {
+            index: 7,
+            value: ''
+        }, {
+            index: 8,
+            value: ''
         }]
     },
     methods: {
@@ -198,15 +213,83 @@ var tasks = new Vue({
         }, {
             index: 5,
             title: 'Sakktábla',
-            desc: 'A távoli jövőben a Földet megtámadták a földönkívüliek. Mészárlás helyett azonban alkut kínáltak: ha helyesen válaszolunk a kérdésükre, megkímélik a Föld élőlényeit és szövetségre lépnek, ha helytelenül, akkor minden élőlényt rabszolgasorba állítanak. A Föld vezetősége ezért összehívta a legokosabb tudósokat, hogy a próba után az egyetlen kiválasztott válaszolhasson a földönkívüliek kérdésére. A tudós 13 óra gondolkozás után végül megoldotta a feladatot, így a Föld páratlan, soha nem látott képességekre tett szert a szövetségnek köszönhetően. Vajon mi lehetett a tudós válasza, ha a kérdése a földönkívülieknek ez volt: 7x7-es interdimenzionális négyzetrácsra bolygókat helyezünk el. A négyzetrács minden oszlopa és sora csak egy bolygót tartalmazhat. A helyzetet bonyolítja, hogy az idegenek által generált interdimenzionális tér sajátosságai miatt nem engedhető meg hogy az átlókkal párhuzamos egyenesek mentén kettő vagy több bolygó együttálása megfigyelhető legyen. Ezeket a bolygókat ugyanis egy harmadik, ellenséges lények megsemmisítik, gyengítve a szövetség erőforrásait. Hány olyan lehetséges elrendezése van 7 bolygónak, ha a földönkívüliek szerint nem engedhető meg egy bolygó megsemmisülése sem?'
+            desc: '<p>A távoli jövőben a Földet megtámadták a földönkívüliek. Mészárlás helyett azonban alkut kínáltak: ha helyesen válaszolunk a kérdésükre, megkímélik a Föld élőlényeit és szövetségre lépnek, ha helytelenül, akkor minden élőlényt rabszolgasorba állítanak.</p> \
+            <p>A Föld vezetősége ezért összehívta a legokosabb tudósokat, hogy a próba után az egyetlen kiválasztott válaszolhasson a földönkívüliek kérdésére. A tudós 13 óra gondolkozás után végül megoldotta a feladatot, így a Föld páratlan, soha nem látott képességekre tett szert a szövetségnek köszönhetően.</p> \
+            <p>Vajon mi lehetett a tudós válasza, ha a kérdése a földönkívülieknek ez volt: 7x7-es interdimenzionális négyzetrácsra bolygókat helyezünk el. A négyzetrács minden oszlopa és sora csak egy bolygót tartalmazhat. A helyzetet bonyolítja, hogy az idegenek által generált interdimenzionális tér sajátosságai miatt nem engedhető meg hogy az átlókkal párhuzamos egyenesek mentén kettő vagy több bolygó együttálása megfigyelhető legyen. Ezeket a bolygókat ugyanis egy harmadik, ellenséges lények megsemmisítik, gyengítve a szövetség erőforrásait.</p> \
+            <p>Hány olyan lehetséges elrendezése van 7 bolygónak, ha a földönkívüliek szerint nem engedhető meg egy bolygó megsemmisülése sem?</p>'
         }, {
             index: 6,
             title: 'Mátrix',
-            desc: '[desc]'
+            desc: '<p> \
+            37107287533902102798797998220837590246510135740250 <br \> \
+            46376937677490009712648124896970078050417018260538 <br \> \
+            74324986199524741059474233309513058123726617309629 <br \> \
+            91942213363574161572522430563301811072406154908250 <br \> \
+            23067588207539346171171980310421047513778063246676 <br \> \
+            89261670696623633820136378418383684178734361726757 <br \> \
+            28112879812849979408065481931592621691275889832738 <br \> \
+            44274228917432520321923589422876796487670272189318 <br \> \
+            47451445736001306439091167216856844588711603153276 <br \> \
+            70386486105843025439939619828917593665686757934951 <br \> \
+            62176457141856560629502157223196586755079324193331 <br \> \
+            64906352462741904929101432445813822663347944758178 <br \> \
+            92575867718337217661963751590579239728245598838407 <br \> \
+            58203565325359399008402633568948830189458628227828 <br \> \
+            80181199384826282014278194139940567587151170094390 <br \> \
+            18336384825330154686196124348767681297534375946515 <br \> \
+            80386287592878490201521685554828717201219257766954 <br \> \
+            78182833757993103614740356856449095527097864797581 <br \> \
+            16726320100436897842553539920931837441497806860984 <br \> \
+            48403098129077791799088218795327364475675590848030 <br \> \
+            87086987551392711854517078544161852424320693150332 <br \> \
+            59959406895756536782107074926966537676326235447210 <br \> \
+            69793950679652694742597709739166693763042633987085 <br \> \
+            41052684708299085211399427365734116182760315001271 <br \> \
+            65378607361501080857009149939512557028198746004375 <br \> \
+            35829035317434717326932123578154982629742552737307 <br \> \
+            94953759765105305946966067683156574377167401875275 <br \> \
+            88902802571733229619176668713819931811048770190271 <br \> \
+            25267680276078003013678680992525463401061632866526 <br \> \
+            36270218540497705585629946580636237993140746255962 <br \> \
+            24074486908231174977792365466257246923322810917141 <br \> \
+            91430288197103288597806669760892938638285025333403 <br \> \
+            34413065578016127815921815005561868836468420090470 <br \> \
+            23053081172816430487623791969842487255036638784583 <br \> \
+            11487696932154902810424020138335124462181441773470 <br \> \
+            63783299490636259666498587618221225225512486764533 <br \> \
+            67720186971698544312419572409913959008952310058822 <br \> \
+            95548255300263520781532296796249481641953868218774 <br \> \
+            76085327132285723110424803456124867697064507995236 <br \> \
+            37774242535411291684276865538926205024910326572967 <br \> \
+            23701913275725675285653248258265463092207058596522 <br \> \
+            29798860272258331913126375147341994889534765745501 <br \> \
+            18495701454879288984856827726077713721403798879715 <br \> \
+            41698116222072977186158236678424689157993532961922 <br \> \
+            62467957194401269043877107275048102390895523597457 <br \> \
+            22918802058777319719839450180888072429661980811197 <br \> \
+            77158542502016545090413245809786882778948721859617 <br \> \
+            72107838435069186155435662884062257473692284509516 <br \> \
+            20849603980134001723930671666823555245252804609722 <br \> \
+            53503534226472524250874054075591789781264330331690 <br \> \
+            </p> \
+            <p>A különböző rendszerek teszteléséhez szükségünk van véletlenszerű bankszámlaszámokra (pénzforgalmi jelzőszám), amelyeknek azonban nem kell szabályosnak lenniük. Mivel a számítógépek csak pszeudo-véletlengenerátort tartalmaznak, egy kicsit javítottunk ezen. Minden esetben generálunk egy 50 x 50-es számmátrixot, amelyet spirálisan bejárunk, majd leírjuk a számokat. Az így kapott számsorhoz választunk egy megfelelő kezdési pontot (79. pozíció), s ezt, majd utána minden 103. karakterét kiolvasva megkapjuk a számlaszámot. A számsor indexelését 0-tól kezdjük. A fenti mátrixhoz melyik számlaszám tartozik, ha a mátrixot a bal felső sarokból indítva, jobbra kezdünk el? </p> \
+            <p>Itt egy 3x4-es példa a bejárásra:</p> \
+            <p> \
+                1 2 3 4 <br \>\
+                5 6 7 8 <br \>\
+                9 0 1 2 <br \>\
+            </p> \
+            <p>1, 2, 3, 4, 8, 2, 1, 0, 9, 5, 6, 7</p>'
         }, {
             index: 7,
             title: 'Rajzolás',
-            desc: 'Az alábbi ábrák közül mennyit lehet lerajzolni egy vonallal a ceruza felemelése nélkül?'
+            desc: '<p>Az alábbi ábrák közül mennyit lehet lerajzolni egy vonallal a ceruza felemelése nélkül?</p> \
+            <div class="img-grid"> \
+                <img src="./src/img/tasks/task-7-img-1.png"></img> \
+                <img src="./src/img/tasks/task-7-img-2.png"></img> \
+                <img src="./src/img/tasks/task-7-img-3.png"></img> \
+                <img src="./src/img/tasks/task-7-img-4.png"></img> \
+            </div>'
         }, {
             index: 8,
             title: 'Átkelés a Hídon',

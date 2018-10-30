@@ -63,9 +63,16 @@ main .grid-background {
 #taskModal .header {
     border-bottom: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     #taskModal .window {
         background-position: left top;
         min-height: auto;
     }   
+}
+#taskModal p {
+    margin-bottom: .5rem;
+}
+#taskModal ul {
+    list-style: circle;
+    margin: 0 0 .5rem 2rem;
 }
