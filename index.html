@@ -125,14 +125,17 @@
                 </div>
             </div>
         </div>
-        <div id="taskModal" class="modal">
+        <div id="taskModal" class="modal large">
             <div class="dimmer">
-                <div class="window">
+                <div class="window" :style="{ 'background-image': 'url(./src/img/tasks/bg-' + index + '.jpg)' }">
                     <div class="header">
                         <div class="title">{{ index }}. feladat - {{ task(index).title }}</div>
                         <div class="close-icon">&times</div>
                     </div>
-                    <div class="body" v-html="task(index).desc">
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-6" v-html="task(index).desc"></div>
+                        </div>
                     </div>
                 </div>
             </div>

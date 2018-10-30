@@ -52,3 +52,14 @@ main .grid-background {
 .hero-img {
     max-height: 330px;
 }
+
+#taskModal .window {
+    background-image: url("../img/tasks/bg-1.jpg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    color: #000;
+    min-height: 700px;
+}
+#taskModal .header {
+    border-bottom: none;
+}

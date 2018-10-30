@@ -201,7 +201,7 @@ var tasks = new Vue({
             desc: 'A távoli jövőben a Földet megtámadták a földönkívüliek. Mészárlás helyett azonban alkut kínáltak: ha helyesen válaszolunk a kérdésükre, megkímélik a Föld élőlényeit és szövetségre lépnek, ha helytelenül, akkor minden élőlényt rabszolgasorba állítanak. A Föld vezetősége ezért összehívta a legokosabb tudósokat, hogy a próba után az egyetlen kiválasztott válaszolhasson a földönkívüliek kérdésére. A tudós 13 óra gondolkozás után végül megoldotta a feladatot, így a Föld páratlan, soha nem látott képességekre tett szert a szövetségnek köszönhetően. Vajon mi lehetett a tudós válasza, ha a kérdése a földönkívülieknek ez volt: 7x7-es interdimenzionális négyzetrácsra bolygókat helyezünk el. A négyzetrács minden oszlopa és sora csak egy bolygót tartalmazhat. A helyzetet bonyolítja, hogy az idegenek által generált interdimenzionális tér sajátosságai miatt nem engedhető meg hogy az átlókkal párhuzamos egyenesek mentén kettő vagy több bolygó együttálása megfigyelhető legyen. Ezeket a bolygókat ugyanis egy harmadik, ellenséges lények megsemmisítik, gyengítve a szövetség erőforrásait. Hány olyan lehetséges elrendezése van 7 bolygónak, ha a földönkívüliek szerint nem engedhető meg egy bolygó megsemmisülése sem?'
         }, {
             index: 6,
-            title: 'Programozási feladatok',
+            title: 'Mátrix',
             desc: '[desc]'
         }, {
             index: 7,
