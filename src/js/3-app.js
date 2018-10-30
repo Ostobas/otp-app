@@ -14,7 +14,6 @@ new Vue({
             }
         },
         success: function (res) {
-            console.log(res)
             ui.alert({
                 type: 'success',
                 content: `Megoldás sikeresen elmentve: <br> ${res.index}. feladat: ${res.value}`
