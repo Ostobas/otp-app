@@ -80,7 +80,7 @@
         <div class="grid">
             <div class="grid-background" :style="bgTranslate"></div>
             <div class="heroes" :style="heroesTranslate">
-                <div v-for="hero in heroes" class="hero-grid" :style="{ left: hero.position + 'px' }" v-on:click="openTask(hero.index)">
+                <div v-for="hero in heroes" class="hero-grid" :style="{ left: hero.position + 'px', cursor: cursor(hero.index) }" v-on:click="openTask(hero.index)">
                     <img class="hero-img" :src="'./src/img/heroes/hero-' + hero.image + '.png'" alt="hero">
                 </div>
             </div>
@@ -129,20 +129,10 @@
             <div class="dimmer">
                 <div class="window">
                     <div class="header">
-                        <div class="title">{{ index }}. feladat</div>
+                        <div class="title">{{ index }}. feladat - {{ task(index).title }}</div>
                         <div class="close-icon">&times</div>
                     </div>
-                    <div class="body" id="solutions">
-                        <div class='spinner-loader'>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
+                    <div class="body" v-html="task(index).desc">
                     </div>
                 </div>
             </div>
