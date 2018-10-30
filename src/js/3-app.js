@@ -41,8 +41,12 @@ new Vue({
     methods: {
         moveRoom(dir) {
             var windowWidth = window.innerWidth
-            var translateAmount = Math.min( 1170, windowWidth ) // 1170: size of a room
-            var maxTranslate = -8193 + windowWidth // 8193: size of the whole office
+            var sizeOfRoom = 1170
+            var sizeOfOffice = 8193
+            var maxTranslate = -8193 + windowWidth
+            var translateAmount = this.translate === 0 || this.translate === maxTranslate
+                ? Math.min( sizeOfRoom - (windowWidth - sizeOfRoom) / 2, windowWidth )
+                : Math.min( sizeOfRoom, windowWidth )
             var nextTranslate = Math.max( Math.min( this.translate + dir * translateAmount, 0), maxTranslate)
 
             if (nextTranslate >= 0) {
@@ -101,3 +105,4 @@ var tasks = new Vue({
         }
     }
 })
+
