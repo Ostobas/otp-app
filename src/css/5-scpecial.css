@@ -63,3 +63,9 @@ main .grid-background {
 #taskModal .header {
     border-bottom: none;
 }
+@media (max-width: 768px) {
+    #taskModal .window {
+        background-position: left top;
+        min-height: auto;
+    }   
+}
