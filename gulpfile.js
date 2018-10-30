@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    babel = require('gulp-babel'),
     htmlmin = require('gulp-htmlmin'),
     imagemin = require('gulp-imagemin'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -60,6 +61,9 @@ gulp.task('css', function() {
 
 gulp.task('js', function() {
     return gulp.src('src/js/**/*.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         .pipe(uglify().on('error', function(e){
             console.log(e)
         }))
