@@ -68,6 +68,7 @@ gulp.task('js', function() {
             console.log(e)
         }))
         .pipe(concat('app.bundle.js'))
+        .pipe(replace('./src/img', 'img'))
         .pipe(gulp.dest('build/js'))
 })
 
