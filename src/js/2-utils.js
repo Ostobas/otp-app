@@ -2,7 +2,14 @@
 var ui
 document.addEventListener('DOMContentLoaded', function() {
     ui = ui()
+    init()
 }, false)
+
+function init() {
+    getData('/inc/process/p.userInit.php', function(res) {
+        console.log(res)
+    })
+}
 
 function postData(uri, data, callback) {
     var xhttp = new XMLHttpRequest()
