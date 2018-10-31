@@ -120,9 +120,17 @@
                                         <input
                                             type="text"
                                             name="answer"
+                                            maxlength="30"
+                                            v-if="!answer.options"
                                             v-model="answer.value"
                                             v-bind:disabled="disabled"
                                         >
+                                        <select v-if="answer.options" v-model="answer.value[0]" name="answer">
+                                            <option v-for="option in answer.options" :value="option">{{ option }}</option>
+                                        </select>
+                                        <select v-if="answer.options" v-model="answer.value[1]" name="answer">
+                                            <option v-for="option in answer.options" :value="option">{{ option }}</option>
+                                        </select>
                                         <button class="btn primary ml-2" type="submit" :disabled="disabled">Mentés</button>
                                     </div>
                                 </div>

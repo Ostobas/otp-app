@@ -7,7 +7,8 @@ var store = {
         value: ""
     }, {
         index: 3,
-        value: ""
+        value: [],
+        options: ['', 'bolíviai', 'dán', 'görög', 'japán', 'skót']
     }, {
         index: 4,
         value: ""

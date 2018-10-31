@@ -210,3 +210,31 @@
     height: 100%;
     vertical-align: baseline;
 }
+/*-----------------
+        Select
+-------------------*/
+.form select {
+    display: block;
+    height: auto;
+    width: 100%;
+    background: #fff;
+    border: 1px solid rgba(34,36,38,.15);
+    border-radius: .28rem;
+    box-shadow: 0 0 0 0 transparent inset;
+    padding: .4375rem 1rem;
+    color: rgba(0,0,0,.85);
+    transition: color .1s ease,border-color .1s ease;
+    cursor: pointer;
+}
+.form select:focus {
+    color: rgba(0,0,0,.95);
+    border-color: #85b7d9;
+    background-color: #fff;
+    box-shadow: 0 0 0 0 rgba(34,36,38,.35) inset;
+}
+select, select option {
+    color: rgba(0,0,0,.85);
+}
+select:invalid, select option[value=""] {
+    color: rgba(191, 191, 191, 0.87);
+}

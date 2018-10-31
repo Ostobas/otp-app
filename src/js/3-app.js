@@ -7,6 +7,7 @@ var answers = new Vue({
     },
     methods: {
         onSubmit: function(index, value) {
+            console.log({index, value})
             if (value === '') {
                 this.failed({ msg: 'Üresen nem lehet menteni!' })
             } else {
