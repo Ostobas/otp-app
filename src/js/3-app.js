@@ -102,6 +102,9 @@ var tasks = new Vue({
     },
     methods: {
         task(index) {
+            if (this.tasks.length === 0) {
+                return { title: '', desc: '<h2>A feladat jelenleg nem elérhető!</h2>' }
+            }
             return this.tasks.filter((t) => t.index === index)[0]
         },
         answer(index) {
@@ -113,3 +116,9 @@ var tasks = new Vue({
     }
 })
 
+new Vue({
+    el: '#topNav',
+    data: {
+        user: store.user
+    }
+})

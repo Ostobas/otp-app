@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function init() {
     getData('/inc/process/p.userInit.php', function(res) {
-        console.log(res)
         store.answers = res.data.answers
         store.tasks = res.data.tasks
         store.user = res.data.user
