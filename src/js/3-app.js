@@ -101,7 +101,6 @@ var tasks = new Vue({
     data: {
         index: 0,
         tasks: store.tasks,
-        aswers: store.answers
     },
     methods: {
         task(index) {

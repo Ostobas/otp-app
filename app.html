@@ -65,17 +65,17 @@
             </button>
             <div class="collapse right">
                 <ul>
-                    <li class="item mr-2">
-                        <a data-target="#answersModal">
-                            <button class="btn primary">Megoldásaim</button>
-                        </a>
-                    </li>
                     <li class="item mt-1-xs mr-2">
                         <div><strong>{{ user.teamName }}</strong></div>
                         <div><small>{{ user.firstName }}</small></div>
                     </li>
                     <li class="item mt-1-xs mr-2">
                         <div>{{ user.deadline }}</div>
+                    </li>
+                    <li class="item mr-2">
+                        <a data-target="#answersModal">
+                            <button class="btn primary">Megoldásaim</button>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -143,7 +143,6 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="task" v-html="task(index).desc"></div>
-                                <div v-if="answer(index)" class="answer mt-1"><strong>A jelenlegi válaszod: {{ answer(index) }}</strong></div>
                             </div>
                         </div>
                     </div>
