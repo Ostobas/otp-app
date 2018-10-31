@@ -17,7 +17,14 @@ function init() {
 
 function logout() {
     getData('/inc/process/p.logout.php', function(res) {
-        console.log(res)
+        if (res.isValid) {
+            window.location.href = res.redirect
+        } else {
+            ui.alert({
+                type: 'danger',
+                content: res.msg
+            })
+        }
     })
 }
 
