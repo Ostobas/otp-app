@@ -72,6 +72,10 @@ gulp.task('js', function() {
         .pipe(gulp.dest('build/js'))
 })
 
-gulp.task('default', ['clean'], function() {
+gulp.task('build', ['clean'], function() {
     gulp.start('html', 'manifest', 'fonts', 'img', 'css', 'js')
+})
+
+gulp.task('default', ['clean'], function() {
+    gulp.start('html', 'css', 'js')
 })
