@@ -82,3 +82,10 @@ main .grid-background {
     list-style: circle;
     margin: 0 0 .5rem 2rem;
 }
+
+#logoutBtn {
+    background-color: rgba(0, 0, 0, 0);
+    color: #f60;
+    font-size: 1.25em;
+    padding: 0;
+}

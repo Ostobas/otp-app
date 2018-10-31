@@ -7,9 +7,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function init() {
     getData('/inc/process/p.userInit.php', function(res) {
-        answers.update(res.data.answers)
-        tasks.update(res.data.tasks)
-        user.update(res.data.user)
+        if (res.isValid) {
+            answers.update(res.data.answers)
+            tasks.update(res.data.tasks)
+            user.update(res.data.user)
+        }
+    })
+}
+
+function logout() {
+    getData('/inc/process/p.logout.php', function(res) {
+        console.log(res)
     })
 }
 

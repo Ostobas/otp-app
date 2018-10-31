@@ -477,6 +477,7 @@
   .mb-2-xs { margin-bottom: 2rem; }
   .mb-3-xs { margin-bottom: 3rem; }
   .d-block-xs { display: block; }
+  .d-in-block-xs { display: inline-block; }
   .d-none-xs { display: none; }
   .j-center-xs { justify-content: center; }
 }

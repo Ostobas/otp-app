@@ -72,10 +72,14 @@
                     <li class="item mt-1-xs mr-2">
                         <div>{{ user.deadline }}</div>
                     </li>
-                    <li class="item mr-2">
+                    <li class="item mt-1-xs mr-2">
                         <a data-target="#answersModal">
                             <button class="btn primary">Megoldásaim</button>
                         </a>
+                    </li>
+                    <li class="item mt-1-xs" onclick="logout()">
+                        <button class="btn" id="logoutBtn"><i class="fas fa-power-off"></i></button>
+                        <span class="d-none d-in-block-xs">Kijelentkezés</span>
                     </li>
                 </ul>
             </div>
