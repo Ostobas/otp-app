@@ -441,7 +441,6 @@
             var self = this,
                 collapse = collapse || document.querySelector('.nav .collapse'),
                 time = time || 300
-
             // We have to use two classes basically. One for during the transition (collapsing), and the other for the final position (active).
             collapse.classList.add('collapsing')
             // Async add the classes, cause of animation purposes.

@@ -53,25 +53,31 @@
 
     <nav id="topNav" class="nav top">
         <div class="container">
-            <div class="line">
-                <div class="left">
-                    <a class="brand" href="/" aria-label="Home">
-                        <span class="logo" alt="logo"></span>
-                    </a>
+            <a class="brand" href="/" aria-label="Home">
+                <span class="logo" alt="logo"></span>
+            </a>
+            <button class="toggle" type="button" aria-label="collapse">
+                <div class="toggle-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
                 </div>
-                <div class="d-flex">
-                    <div> {{ user.firstName }} </div>
-                    <a class="d-none-xs mr-1" data-target="#answersModal">
-                        <button class="btn primary">Megoldásaim</button>
-                    </a>
-                    <button class="toggle" type="button" aria-label="collapse">
-                        <div class="toggle-icon">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </div>
-                    </button>
-                </div>
+            </button>
+            <div class="collapse right">
+                <ul>
+                    <li class="item mr-2">
+                        <a data-target="#answersModal">
+                            <button class="btn primary">Megoldásaim</button>
+                        </a>
+                    </li>
+                    <li class="item mt-1-xs mr-2">
+                        <div><strong>{{ user.teamName }}</strong></div>
+                        <div><small>{{ user.firstName }}</small></div>
+                    </li>
+                    <li class="item mt-1-xs mr-2">
+                        <div>{{ user.deadline }}</div>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>

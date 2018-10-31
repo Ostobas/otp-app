@@ -88,8 +88,8 @@ var store = {
     ],
     tasks: [],
     user: {
-        deadline: '',
-        firstName: '',
-        teamName: ''
+        deadline: '2018-11-20 23:59:59',
+        firstName: 'Krisztián',
+        teamName: 'teamName'
     }
 }

@@ -37,6 +37,12 @@ main .grid-background {
 #arrowRight {
     right: 0;
 }
+@media (max-width: 767px) {
+    .arrow {
+        top: auto;
+        bottom: 10%;
+    }
+}
 
 .heroes {
     position: relative;
