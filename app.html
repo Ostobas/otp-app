@@ -103,7 +103,7 @@
                 <div class="window">
                     <div class="header">
                         <div class="title">Feladat megadás</div>
-                        <div class="close-icon">&times</div>
+                        <div class="close-icon"><i class="fas fa-times"></i></div>
                     </div>
                     <div class="body" id="answers">
                         <div v-if="fetching" class='spinner-loader'>
@@ -149,7 +149,7 @@
                 <div class="window" :style="{ 'background-image': 'url(./src/img/tasks/bg-' + index + '.jpg)' }">
                     <div class="header">
                         <div class="title">{{ index }}. feladat - {{ task(index).title }}</div>
-                        <div class="close-icon">&times</div>
+                        <div class="close-icon"><i class="fas fa-times"></i></div>
                     </div>
                     <div class="body">
                         <div class="row">
