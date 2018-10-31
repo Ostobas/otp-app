@@ -1,4 +1,4 @@
-new Vue({
+var answers = new Vue({
     el: '#answers',
     data: {
         fetching: false,
@@ -31,6 +31,9 @@ new Vue({
                 type: 'danger',
                 content: `Megoldás mentése sikertelen: <br> ${res.msg}`
             })
+        },
+        update(answers) {
+            this.answers = answers
         }
     }
 })
@@ -112,13 +115,21 @@ var tasks = new Vue({
             else {
                 return this.aswers.filter((a) => a.index === index)[0].value
             }
+        },
+        update(tasks) {
+            this.tasks = tasks
         }
     }
 })
 
-new Vue({
+var user = new Vue({
     el: '#topNav',
     data: {
         user: store.user
+    },
+    methods: {
+        update(user) {
+            this.user = user
+        }
     }
 })
